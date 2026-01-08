@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  :root {
+    --color-black: #000000;
+    --color-green-accent: #bbf4a2;
+    --color-white: #ffffff;
+    --color-gray-muted: #878787;
+    --color-glass: rgba(101, 101, 101, 0.20);
+  }
+}
+
+@layer components {
+  .glass-morphic {
+    background-color: var(--color-glass);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+  }
+
+  .green-glow {
+    box-shadow: 0px 0px 10px var(--color-green-accent);
+  }
+
+  .green-glow-strong {
+    box-shadow: 0px 0px 12.5px var(--color-green-accent);
+  }
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
